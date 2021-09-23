@@ -1,4 +1,5 @@
-var timer = document.getElementById("timer")
+var timerEl = document.querySelector(".time");
+var mainElem = document.querySelector("#main");
 var title = document.getElementById("title-page")
 var question1 = document.getElementById("hide1")
 var question2 = document.getElementById("hide2")
@@ -22,3 +23,30 @@ var buttonA3 = document.getElementById("btn-a3")
 var buttonB3 = document.getElementById("btn-b3")
 var buttonC3 = document.getElementById("btn-c3")
 var buttonD3 = document.getElementById("btn-d3")
+
+var secondsleft = 30
+
+
+
+// setting a timer countdown from 30
+var setTime = function () {
+    var timeInterval = setInterval(function () {
+        secondsleft = secondsleft - 1;
+
+        timerEl.textContent = (secondsleft + " seconds left until GAME OVER.")
+
+
+        if (secondsleft === 0) {
+            clearInterval(timeInterval);
+            gameover();
+        }
+    }, 1000)
+}
+
+
+var gameover = function () {
+    timerEl.textContent = "";
+}
+
+setTime();
+//when countdown to 0 show "game over"

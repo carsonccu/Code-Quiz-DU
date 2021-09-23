@@ -3,7 +3,7 @@
     color: cadetblue;
 }
 body{
-    background-color: black;
+    /* background-color: black; */
 }
 #timer{
     display: flex;
