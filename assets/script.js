@@ -4,7 +4,9 @@ var title = document.getElementById("title-page")
 var question1 = document.querySelector("#hide1")
 var question2 = document.querySelector("#hide2")
 var question3 = document.querySelector("#hide3")
-var finalpage = document.getElementById("high-score-page")
+var finalpage = document.querySelector("#high-score-page")
+var rulesEl = document.querySelector("#rules")
+var playerchoice = document.querySelector("#player-choice")
 
 var startbutton = document.getElementById("start-button")
 var playagainbutton = document.getElementById("play-again")
@@ -29,6 +31,7 @@ var secondsleft = 30
 question1.setAttribute("style", "display: none;")
 question2.setAttribute("style", "display: none;")
 question3.setAttribute("style", "display: none;")
+finalpage.setAttribute("style", "display: none;")
 
 // setting a timer countdown from 30
 var setTime = function () {
@@ -61,5 +64,68 @@ startbutton.addEventListener("click", startQuiz)
 
 function startQuiz() {
     timerEl.classList.remove("time");
-    question1.setAttribute("style", "visibility: visible:")
+    question1.setAttribute("style", "visibility: visible;")
+    title.setAttribute("style", "display: none;")
+    rulesEl.setAttribute("style", "display:none;")
+    startbutton.setAttribute("style", "display:none;")
+
+    var correctanswer1 = function () {
+        if (buttonA.dataset === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        }
+    };
+    var correctanswer2 = function () {
+        if (buttonA.dataset === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        }
+
+    };
+    var correctanswer3 = function () {
+        if (buttonA.dataset === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        }
+    };
+    var correctanswer4 = function () {
+        if (buttonA.dataset === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question2.setAttribute("style", "visibility:visible;");
+            question1.setAttribute("style", "display: none;");
+        }
+    };
+
 }
+
+buttonA.addEventListener("click", correctanswer1);
+buttonB.addEventListener("click", correctanswer2);
+buttonC.addEventListener("click", correctanswer3);
+buttonD.addEventListener("click", correctanswer4);
