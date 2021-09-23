@@ -10,17 +10,64 @@
 </head>
 
 <body>
-    <div class="quiz-container">
-        <div id="question-container" class="hide">
-            <div id="question">Questions</div>
-        </div>
-        <div id="timer" class="hide">
-            <h1>Time Left</h1>
-            <h2 id="timer-text">0</h2>
-        </div>
+    <div id="timer" class="hide">
+        <h1>Time Left</h1>
+        <h2 id="timer-text">0</h2>
+    </div>
     </div>
     <h1>Popular Movie Quiz</h1>
     <p class="info">In this quiz you will have 2 minutes to answer all the questions. If you answer a question
         incorrectly the timer will subtract 15 seconds. There is a total of 6 questions. You're final score will be
         recorded by the amount of time left on the clock.</p>
     <button id="start-button" class="start-button button">Start Quiz</button>
+
+    <div class="quiz" id="hide1">
+        <h1 id="1stquestion" class="quiz-question">In Frozen, What is the name of the Reindeer? </h1>
+        <ol>
+            <button id="btn-a" class="choices" data-answer="true">
+                <li id="list1">Sven</li>
+            </button>
+            <button id="btn-b" class="choices" data-answer="false">
+                <li id="list1">Steven</li>
+            </button>
+            <button id="btn-c" class="choices" data-answer="false">
+                <li id="list1">Rudolph</li>
+            </button>
+            <button id="btn-d" class="choices" data-answer="false">
+                <li id="list1">Comet</li>
+            </button>
+        </ol>
+        <div class="quiz" id="hide2">
+            <h1 id="2ndquestion" class="quiz-question">Jerry Maguire what is the iconic saying</h1>
+            <ol>
+                <button id="btn-a" class="choices" data-answer="false">
+                    <li id="list2">Stand with me!</li>
+                </button>
+                <button id="btn-b" class="choices" data-answer="false">
+                    <li id="list2">No days off!</li>
+                </button>
+                <button id="btn-c" class="choices" data-answer="true">
+                    <li id="list2">Show me the money!</li>
+                </button>
+                <button id="btn-d" class="choices" data-answer="false">
+                    <li id="list2">Give me everything you got!</li>
+                </button>
+            </ol>
+        </div>
+        <div class="quiz" id="hide3">
+            <h1 id="3rdquestion" class="quiz-question">Who plays the main character in the movie Drive? </h1>
+            <ol>
+                <button id="btn-a" class="choices" data-answer="false">
+                    <li id="list3">Ryan Reynolds</li>
+                </button>
+                <button id="btn-b" class="choices" data-answer="false">
+                    <li id="list3">Brad Pitt</li>
+                </button>
+                <button id="btn-c" class="choices" data-answer="false">
+                    <li id="list3">Bradley Cooper</li>
+                </button>
+                <button id="btn-d" class="choices" data-answer="true">
+                    <li id="list3">Ryan Gosling</li>
+                </button>
+            </ol>
+        </div>
