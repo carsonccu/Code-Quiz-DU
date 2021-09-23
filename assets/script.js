@@ -71,7 +71,7 @@ function startQuiz() {
 
     buttonA.addEventListener("click", correctanswer1);
     function correctanswer1() {
-        if (buttonA.dataset === "true") {
+        if (buttonA.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -85,7 +85,7 @@ function startQuiz() {
     };
     buttonB.addEventListener("click", correctanswer2);
     function correctanswer2() {
-        if (buttonB.dataset === "true") {
+        if (buttonB.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -100,7 +100,7 @@ function startQuiz() {
     };
     buttonC.addEventListener("click", correctanswer3);
     function correctanswer3() {
-        if (buttonC.dataset === "true") {
+        if (buttonC.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -114,7 +114,7 @@ function startQuiz() {
     };
     buttonD.addEventListener("click", correctanswer4);
     function correctanswer4() {
-        if (buttonD.dataset === "true") {
+        if (buttonD.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -124,6 +124,64 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+        }
+    };
+
+    buttonA2.addEventListener("click", correctanswer5);
+    function correctanswer5() {
+        if (buttonA2.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        }
+    };
+    buttonB2.addEventListener("click", correctanswer6);
+    function correctanswer6() {
+        if (buttonB2.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        }
+
+    };
+    buttonC2.addEventListener("click", correctanswer7);
+    function correctanswer7() {
+        if (buttonC2.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        }
+    };
+    buttonD2.addEventListener("click", correctanswer8);
+    function correctanswer8() {
+        if (buttonD2.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question2.setAttribute("style", "display: none;");
         }
     };
 
