@@ -17,7 +17,6 @@ body{
 ol{
     list-style-type: none;
 }
-#hide1, #hide2, #hide3, #hide4{
-    /* display: none;
-    visibility: hidden; */
+.time{
+    display: none;
 }
