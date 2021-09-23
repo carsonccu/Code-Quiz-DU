@@ -16,10 +16,10 @@ var buttonB = document.querySelector("#btn-b")
 var buttonC = document.querySelector("#btn-c")
 var buttonD = document.querySelector("#btn-d")
 
-var buttonA2 = document.getElementById("btn-a1")
-var buttonB2 = document.getElementById("btn-b2")
-var buttonA2 = document.getElementById("btn-c2")
-var buttonD2 = document.getElementById("btn-d2")
+var buttonA2 = document.querySelector("#btn-a1")
+var buttonB2 = document.querySelector("#btn-b2")
+var buttonA2 = document.querySelector("#btn-c2")
+var buttonD2 = document.querySelector("#btn-d2")
 
 var buttonA3 = document.getElementById("btn-a3")
 var buttonB3 = document.getElementById("btn-b3")
@@ -126,6 +126,7 @@ function startQuiz() {
             question1.setAttribute("style", "display: none;");
         }
     };
+    // --------------------------------question2-------------------------------------------
 
     buttonA2.addEventListener("click", correctanswer5);
     function correctanswer5() {
@@ -182,6 +183,65 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question3.setAttribute("style", "visibility:visible;");
             question2.setAttribute("style", "display: none;");
+        }
+    };
+    // ------------------------QUESTION 3-------------------------------------
+
+    buttonA3.addEventListener("click", correctanswer9);
+    function correctanswer9() {
+        if (buttonA3.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        }
+    };
+    buttonB3.addEventListener("click", correctanswer10);
+    function correctanswer10() {
+        if (buttonB3.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        }
+
+    };
+    buttonC3.addEventListener("click", correctanswer11);
+    function correctanswer11() {
+        if (buttonC3.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        }
+    };
+    buttonD3.addEventListener("click", correctanswer12);
+    function correctanswer12() {
+        if (buttonD3.dataset.answer === "true") {
+            console.log("correct");
+            playerchoice.innerText = "Hell Yea!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
+        } else {
+            console.log("Bummer")
+            playerchoice.innerText = "Bummer!";
+            question3.setAttribute("style", "visibility:visible;");
+            question3.setAttribute("style", "display: none;");
         }
     };
 
