@@ -11,10 +11,10 @@ var playerchoice = document.querySelector("#player-choice")
 var startbutton = document.getElementById("start-button")
 var playagainbutton = document.getElementById("play-again")
 
-var buttonA = document.getElementById("btn-a")
-var buttonB = document.getElementById("btn-b")
-var buttonC = document.getElementById("btn-c")
-var buttonD = document.getElementById("btn-d")
+var buttonA = document.querySelector("#btn-a")
+var buttonB = document.querySelector("#btn-b")
+var buttonC = document.querySelector("#btn-c")
+var buttonD = document.querySelector("#btn-d")
 
 var buttonA2 = document.getElementById("btn-a1")
 var buttonB2 = document.getElementById("btn-b2")
@@ -69,7 +69,8 @@ function startQuiz() {
     rulesEl.setAttribute("style", "display:none;")
     startbutton.setAttribute("style", "display:none;")
 
-    var correctanswer1 = function () {
+    buttonA.addEventListener("click", correctanswer1);
+    function correctanswer1() {
         if (buttonA.dataset === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
@@ -82,8 +83,9 @@ function startQuiz() {
             question1.setAttribute("style", "display: none;");
         }
     };
-    var correctanswer2 = function () {
-        if (buttonA.dataset === "true") {
+    buttonB.addEventListener("click", correctanswer2);
+    function correctanswer2() {
+        if (buttonB.dataset === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -96,8 +98,9 @@ function startQuiz() {
         }
 
     };
-    var correctanswer3 = function () {
-        if (buttonA.dataset === "true") {
+    buttonC.addEventListener("click", correctanswer3);
+    function correctanswer3() {
+        if (buttonC.dataset === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -109,8 +112,9 @@ function startQuiz() {
             question1.setAttribute("style", "display: none;");
         }
     };
-    var correctanswer4 = function () {
-        if (buttonA.dataset === "true") {
+    buttonD.addEventListener("click", correctanswer4);
+    function correctanswer4() {
+        if (buttonD.dataset === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
             question2.setAttribute("style", "visibility:visible;");
@@ -125,7 +129,7 @@ function startQuiz() {
 
 }
 
-buttonA.addEventListener("click", correctanswer1);
-buttonB.addEventListener("click", correctanswer2);
-buttonC.addEventListener("click", correctanswer3);
-buttonD.addEventListener("click", correctanswer4);
+// buttonA.addEventListener("click", correctanswer1);
+// buttonB.addEventListener("click", correctanswer2);
+// buttonC.addEventListener("click", correctanswer3);
+// buttonC.addEventListener("click", correctanswer4);
