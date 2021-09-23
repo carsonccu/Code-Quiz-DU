@@ -1,0 +1,23 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: cadetblue;
+}
+body{
+    background-color: black;
+}
+#timer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#title-page {
+    color: aqua;
+}
+ol{
+    list-style-type: none;
+}
+#hide1, #hide2, #hide3, #hide4{
+    display: none;
+    visibility: hidden;
+}
