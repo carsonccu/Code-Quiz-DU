@@ -83,7 +83,6 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
-            wrongAnswer();
         }
     };
     buttonB.addEventListener("click", correctanswer2);
