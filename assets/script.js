@@ -57,12 +57,6 @@ var gameover = function () {
 }
 
 setTime();
-//when countdown to 0 show "game over"
-
-function wrongAnswer() {
-    if (console.log === "Bummer!");
-    secondsleft = secondsleft - 5;
-}
 
 startbutton.addEventListener("click", startQuiz)
 
@@ -99,6 +93,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
 
     };
@@ -114,6 +109,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonD.addEventListener("click", correctanswer4);
@@ -128,6 +124,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     // --------------------------------question2-------------------------------------------
@@ -144,6 +141,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question3.setAttribute("style", "visibility:visible;");
             question2.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonB2.addEventListener("click", correctanswer6);
@@ -158,6 +156,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question3.setAttribute("style", "visibility:visible;");
             question2.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
 
     };
@@ -173,6 +172,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question3.setAttribute("style", "visibility:visible;");
             question2.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonD2.addEventListener("click", correctanswer8);
@@ -187,6 +187,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question3.setAttribute("style", "visibility:visible;");
             question2.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     // ------------------------QUESTION 3-------------------------------------
@@ -203,6 +204,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonB3.addEventListener("click", correctanswer10);
@@ -217,6 +219,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
 
     };
@@ -232,6 +235,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonD3.addEventListener("click", correctanswer12);
@@ -246,6 +250,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     playagainbutton.addEventListener("click", startQuiz)
