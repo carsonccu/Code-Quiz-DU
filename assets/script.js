@@ -16,9 +16,9 @@ var buttonB = document.querySelector("#btn-b")
 var buttonC = document.querySelector("#btn-c")
 var buttonD = document.querySelector("#btn-d")
 
-var buttonA2 = document.querySelector("#btn-a1")
+var buttonA2 = document.querySelector("#btn-a2")
 var buttonB2 = document.querySelector("#btn-b2")
-var buttonA2 = document.querySelector("#btn-c2")
+var buttonC2 = document.querySelector("#btn-c2")
 var buttonD2 = document.querySelector("#btn-d2")
 
 var buttonA3 = document.getElementById("btn-a3")
@@ -49,6 +49,7 @@ var setTime = function () {
 }
 
 
+
 var gameover = function () {
     timerEl.textContent = "";
 }
@@ -57,6 +58,7 @@ setTime();
 //when countdown to 0 show "game over"
 
 function wrongAnswer() {
+    if (console.log === "Bummer!");
     secondsleft = secondsleft - 5;
 }
 
@@ -81,6 +83,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+            wrongAnswer();
         }
     };
     buttonB.addEventListener("click", correctanswer2);
@@ -192,12 +195,12 @@ function startQuiz() {
         if (buttonA3.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         } else {
             console.log("Bummer")
             playerchoice.innerText = "Bummer!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         }
     };
@@ -206,12 +209,12 @@ function startQuiz() {
         if (buttonB3.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         } else {
             console.log("Bummer")
             playerchoice.innerText = "Bummer!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         }
 
@@ -221,12 +224,12 @@ function startQuiz() {
         if (buttonC3.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         } else {
             console.log("Bummer")
             playerchoice.innerText = "Bummer!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         }
     };
@@ -235,16 +238,17 @@ function startQuiz() {
         if (buttonD3.dataset.answer === "true") {
             console.log("correct");
             playerchoice.innerText = "Hell Yea!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         } else {
             console.log("Bummer")
             playerchoice.innerText = "Bummer!";
-            question3.setAttribute("style", "visibility:visible;");
+            finalpage.setAttribute("style", "visibility:visible;");
             question3.setAttribute("style", "display: none;");
         }
     };
-
+    playagainbutton.addEventListener("click", startQuiz)
+    finalpage.setAttribute("style", "display: none;");
 }
 
 // buttonA.addEventListener("click", correctanswer1);
