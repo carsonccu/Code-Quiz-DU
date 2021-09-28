@@ -10,6 +10,8 @@ var playerchoice = document.querySelector("#player-choice")
 
 var startbutton = document.getElementById("start-button")
 var playagainbutton = document.getElementById("play-again")
+var submit = document.querySelector("#submit")
+var userinput = document.querySelector("#userinput").value;
 
 var buttonA = document.querySelector("#btn-a")
 var buttonB = document.querySelector("#btn-b")
@@ -248,9 +250,17 @@ function startQuiz() {
     };
     playagainbutton.addEventListener("click", startQuiz)
     finalpage.setAttribute("style", "display: none;");
+
 }
 
-// buttonA.addEventListener("click", correctanswer1);
-// buttonB.addEventListener("click", correctanswer2);
-// buttonC.addEventListener("click", correctanswer3);
-// buttonC.addEventListener("click", correctanswer4);
+
+// function savescore() { }
+    // userinput.textContent = localStorage.getItem("userinput");
+    // submit.addEventListener("click", savescore())
+    // if (userinput === "")
+    //     displayMessage("initials cannot be blank");
+    // else
+    //     displayMessage("saved successfully");
+
+
+    // localStorage.setItem("submit", submit);
