@@ -10,8 +10,9 @@ var playerchoice = document.querySelector("#player-choice")
 
 var startbutton = document.getElementById("start-button")
 var playagainbutton = document.getElementById("play-again")
-var submit = document.querySelector("#submit")
-var userinput = document.querySelector("#userinput").value;
+var submit = document.querySelector("#submit-button")
+var intitialspan = document.querySelector("#user-initials")
+// var userinput = document.querySelector("#userinput").value;
 
 var buttonA = document.querySelector("#btn-a")
 var buttonB = document.querySelector("#btn-b")
@@ -28,14 +29,26 @@ var buttonB3 = document.getElementById("btn-b3")
 var buttonC3 = document.getElementById("btn-c3")
 var buttonD3 = document.getElementById("btn-d3")
 
-var secondsleft = 30
+var secondsleft = 120
 
 question1.setAttribute("style", "display: none;")
 question2.setAttribute("style", "display: none;")
 question3.setAttribute("style", "display: none;")
 finalpage.setAttribute("style", "display: none;")
 
-// setting a timer countdown from 30
+function savescore() {
+    intitialspan.textContent = localStorage.getItem("initials1");
+}
+submit.addEventListener("click", function (event) {
+    event.preventDefault();
+
+
+    var initials1 = document.querySelector("#userinput").value;
+
+    localStorage.setItem("initials1", initials1);
+    savescore();
+})
+// setting a timer countdown from 120
 var setTime = function () {
     var timeInterval = setInterval(function () {
         secondsleft = secondsleft - 1;
@@ -56,11 +69,13 @@ var gameover = function () {
     timerEl.textContent = "";
 }
 
-setTime();
+// setTime();
+
 
 startbutton.addEventListener("click", startQuiz)
 
 function startQuiz() {
+    setTime();
     timerEl.classList.remove("time");
     question1.setAttribute("style", "visibility: visible;")
     title.setAttribute("style", "display: none;")
@@ -79,6 +94,7 @@ function startQuiz() {
             playerchoice.innerText = "Bummer!";
             question2.setAttribute("style", "visibility:visible;");
             question1.setAttribute("style", "display: none;");
+            secondsleft = secondsleft - 5;
         }
     };
     buttonB.addEventListener("click", correctanswer2);
@@ -253,19 +269,10 @@ function startQuiz() {
             secondsleft = secondsleft - 5;
         }
     };
-    playagainbutton.addEventListener("click", startQuiz)
+
+    playagainbutton.addEventListener("click", startQuiz);
     finalpage.setAttribute("style", "display: none;");
+
 
 }
 
-
-// function savescore() { }
-    // userinput.textContent = localStorage.getItem("userinput");
-    // submit.addEventListener("click", savescore())
-    // if (userinput === "")
-    //     displayMessage("initials cannot be blank");
-    // else
-    //     displayMessage("saved successfully");
-
-
-    // localStorage.setItem("submit", submit);

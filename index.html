@@ -18,7 +18,7 @@
     </div>
     <h1 id="title-page" class="hidetitle">Popular Movie Quiz</h1>
     <p id="rules">In this quiz you will have 2 minutes to answer all the questions. If you answer a question
-        incorrectly the timer will subtract 15 seconds. There is a total of 6 questions. You're final score will
+        incorrectly the timer will subtract 5 seconds. There is a total of 3 questions. You're final score will
         berecorded by the amount of time left on the clock.</p>
     <button id="start-button" class="start-button button">Start Quiz</button>
 
@@ -78,8 +78,18 @@
             Congratulations on finishing the quiz! Please enter your initials and save your score! Play again for a
             higher score!
         </p>
-        <input id="userinput" type="text" maxlength="2" name="initials" value="">
-        <button id="submit">Submit Score</button>
+        <form method="POST">
+            <div class="input-group">
+                <label for="initials">INITIALS</label>
+                <input id="userinput" type="text" maxlength="2" name="initials" value="">
+            </div>
+            <button id="submit-button">Submit Score</button>
+        </form>
+        <div class="card">
+            <h2>Players High Scores</h2>
+            <p>Initials: <span id="user-initials"></span></p>
+            <p>Score: <span id="playerscore"></span></p>
+        </div>
         <button id=play-again>Play Again</button>
     </div>
     <script src="assets/script.js"></script>
