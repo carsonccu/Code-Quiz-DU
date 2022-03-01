@@ -42,7 +42,6 @@ function savescore() {
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 
-
     var initials1 = document.querySelector("#userinput").value;
 
     localStorage.setItem("initials1", initials1);
@@ -63,10 +62,13 @@ var setTime = function () {
     }, 1000)
 }
 
-
+function pausetime() {
+    if (secondsleft > 0)
+        clearInterval(timeInterval);
+}
 
 var gameover = function () {
-    timerEl.textContent = "";
+    timerEl.textContent = "YOU LOST";
 }
 
 // setTime();

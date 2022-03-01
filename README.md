@@ -14,8 +14,9 @@ SO THAT I can gauge my progress compared to my peers
 
 ## Screenshot of Quiz
 
-## Usage
+![Screenshot of Quiz](assets/quiz.png)
 
 ## Links
 
-## Credits
+* https://github.com/carsonccu/Code-Quiz-DU
+* 
